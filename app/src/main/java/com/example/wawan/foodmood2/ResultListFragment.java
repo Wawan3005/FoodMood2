@@ -44,6 +44,8 @@ public class ResultListFragment extends Fragment {
         restaurantsAdapter = new RestaurantAdapter(restaurants);
         rcvRestaurants.setAdapter(restaurantsAdapter);
 
+
+
         return rootview;
     }
 

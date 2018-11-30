@@ -20,7 +20,7 @@ public class DetailsFragment extends Fragment {
         // Inflate the layout for this fragment
         View rootview = inflater.inflate(R.layout.fragment_details, container, false);
         // rootView.findViewById...
-        System.out.println("salut c est ResultListFragment");
+        System.out.println("salut c est DetailsFragment");
 
         Bundle bundle = getArguments();
         restaurants = (ArrayList<GooglePlace>) bundle.getSerializable("cle");
