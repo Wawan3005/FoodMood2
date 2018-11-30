@@ -2,7 +2,7 @@ package com.example.wawan.foodmood2;
 
 import java.io.Serializable;
 
-public class GooglePlace {
+public class GooglePlace implements Serializable{
 
     private String name;
     private String category;

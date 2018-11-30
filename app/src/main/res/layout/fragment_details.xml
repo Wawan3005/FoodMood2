@@ -12,14 +12,73 @@
         android:orientation="horizontal">
     </RelativeLayout>-->
 
-    <TextView
-        android:id="@+id/textViewPurposeApp"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_weight="1"
-        android:gravity="center"
-        android:text="Looking for a snack?"
-        android:textSize="45dp"
-        tools:text="Looking for a snack?" />
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textViewName"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Name"
+            tools:text="Name" />
+
+        <TextView
+            android:id="@+id/textViewNameValue"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="TextViewName"
+            tools:text="Name" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textViewRating"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Rating"
+            tools:text="Rating" />
+
+        <TextView
+            android:id="@+id/textViewRatingValue"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="TextViewRatingValue"
+            tools:text="Rating" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textViewOpenhours"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Openhours"
+            tools:text="Openhours" />
+
+        <TextView
+            android:id="@+id/textViewOpenhoursValue"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="TextViewOpenhours"
+            tools:text="Openhours" />
+    </LinearLayout>
 
 </LinearLayout>

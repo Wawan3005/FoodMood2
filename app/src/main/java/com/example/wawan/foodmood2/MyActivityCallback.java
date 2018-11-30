@@ -6,5 +6,5 @@ interface MyActivityCallback {
     void onRechercherButtonPressed(String ville, String typeCuisine);
     void setupTabs();
 
-    void OnClickItem();
+    void OnClickItem(GooglePlace restaurant);
 }

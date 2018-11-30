@@ -72,6 +72,8 @@ public class MainActivity extends AppCompatActivity implements MyActivityCallbac
         ActionBar actionBar = getSupportActionBar();
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
         actionBar.setDisplayShowTitleEnabled(true);
+        Bundle bundle2 = new Bundle();
+        bundle2.putSerializable("cle", restaurants.get(1));
         Bundle bundle = new Bundle();
         bundle.putSerializable("cle", restaurants);
         System.out.println("Liste restaurants dans setupTabs");
@@ -102,7 +104,7 @@ public class MainActivity extends AppCompatActivity implements MyActivityCallbac
                 .setText("Détails")
                 //.setIcon(R.drawable.ic_mentions)
                 .setTabListener(new SupportFragmentTabListener<DetailsFragment>(R.id.result, this,
-                        "third", DetailsFragment.class, bundle));
+                        "third", DetailsFragment.class, bundle2));
         actionBar.addTab(tab3);
     }
 
@@ -302,7 +304,7 @@ public class MainActivity extends AppCompatActivity implements MyActivityCallbac
     }*/
 
 
-            public void OnClickItem() {
+            public void OnClickItem(GooglePlace restaurant) {
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
                 DetailsFragment fragment = new DetailsFragment();
@@ -310,7 +312,7 @@ public class MainActivity extends AppCompatActivity implements MyActivityCallbac
                 fragmentTransaction.commit();
 
                 Bundle bundle = new Bundle();
-                //bundle.putSerializable("cle", restaurant);
+                bundle.putSerializable("cle", restaurant);
                 fragment.setArguments(bundle);
             }
 

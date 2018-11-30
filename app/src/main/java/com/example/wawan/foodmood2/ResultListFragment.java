@@ -38,10 +38,10 @@ public class ResultListFragment extends Fragment {
                 new RecyclerItemClickListener(getContext(), rcvRestaurants ,new RecyclerItemClickListener.OnItemClickListener() {
                     @Override public void onItemClick(View view, int position) {
                         // do whatever
-                        Toast.makeText(getContext(), "CEST UN TOOOOOOOASTTT!", Toast.LENGTH_SHORT).show();
 
                         //Création d'un fragment manager pour la gestion des fragments
-                        activity.OnClickItem();
+                        activity.OnClickItem(restaurants.get(position));
+                        //Toast.makeText(getContext(), "CEST UN TOOOOOOOASTTT!" + restaurants.get(position).getName(), Toast.LENGTH_SHORT).show();
 
 
                     }
