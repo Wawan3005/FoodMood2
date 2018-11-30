@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">FoodMood2</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="save">Pass</string>
+</resources>
