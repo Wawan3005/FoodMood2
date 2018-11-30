@@ -3,16 +3,20 @@ package com.example.wawan.foodmood2;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
 public class ResultListFragment extends Fragment {
 
+    private FragmentManager fragmentManager;
     private RecyclerView rcvRestaurants;
     private MyActivityCallback activity;
     private ArrayList<GooglePlace> restaurants;
@@ -27,6 +31,23 @@ public class ResultListFragment extends Fragment {
         System.out.println("salut c est ResultListFragment");
 
         rcvRestaurants = rootview.findViewById(R.id.a_main_rcv_restaurants);
+
+        //ici
+
+                rcvRestaurants.addOnItemTouchListener(
+                new RecyclerItemClickListener(getContext(), rcvRestaurants ,new RecyclerItemClickListener.OnItemClickListener() {
+                    @Override public void onItemClick(View view, int position) {
+                        // do whatever
+                        Toast.makeText(getContext(), "CEST UN TOOOOOOOASTTT!", Toast.LENGTH_SHORT).show();
+
+                        //Création d'un fragment manager pour la gestion des fragments
+                        activity.OnClickItem();
+
+
+                    }
+
+                })
+        );
 
         Bundle bundle = getArguments();
         restaurants = (ArrayList<GooglePlace>) bundle.getSerializable("cle");

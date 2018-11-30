@@ -300,4 +300,18 @@ public class MainActivity extends AppCompatActivity implements MyActivityCallbac
                 return super.onOptionsItemSelected(item);
         }
     }*/
+
+
+            public void OnClickItem() {
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
+                DetailsFragment fragment = new DetailsFragment();
+                fragmentTransaction.add(R.id.container, fragment);
+                fragmentTransaction.commit();
+
+                Bundle bundle = new Bundle();
+                //bundle.putSerializable("cle", restaurant);
+                fragment.setArguments(bundle);
+            }
+
 }
